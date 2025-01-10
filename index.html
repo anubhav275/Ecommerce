@@ -11,6 +11,7 @@
 	    pageUrl: window.location.href,
 	    pagePath: window.location.pathname	
 	}
+	events: []
 };
 </script>
 
@@ -19,12 +20,12 @@
 	const clickedElement = event.target;
 	window.digitalData.events.push({
 	       event: "click",
-		 element: {
+	       element: {
 			type: clickedElement.tagName.toLowerCase(),
 			id: clickedElement.id ||| "N/A",
 			text: clickedElement.innerText || "N/A"
 			};
-		 timestamp: new Date().toISOString()
+	       timestamp: new Date().toISOString()
 
 });
 </script>
