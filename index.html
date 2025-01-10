@@ -13,6 +13,21 @@
 	}
 };
 </script>
+
+<script>
+	document.addEventListener("click", function(event){
+	const clickedElement = event.target;
+	window.digitalData.events.push({
+	       event: "click",
+		 element: {
+			type: clickedElement.tagName.toLowerCase(),
+			id: clickedElement.id ||| "N/A",
+			text: clickedElement.innerText || "N/A"
+			};
+		 timestamp: new Date().toISOString()
+
+});
+</script>
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE579PBW57"></script>
 <script>
