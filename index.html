@@ -3,10 +3,12 @@
    <head>
       <!-- Adobe -->
 <script>
-   window.digitalData = {
-	page: {
-	    pageName: window.document.title,
-	    pageUrl:window.location.href,
+   window.digitalData = window.digitalData ||{};
+ 
+   window.digitalData.page = {
+	pageInfo: {
+	    pageName: document.title,
+	    pageUrl: window.location.href,
 	    pagePath: window.location.pathname	
 	};
 	events: []
